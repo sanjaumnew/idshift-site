@@ -1,0 +1,133 @@
+/* Global Reset & Base */
+html {
+  scroll-padding-top: 80px; /* offset for sticky header */
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Header & Navigation */
+header {
+  position: sticky;
+  top: 0;
+  background: #1a1a1a;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+nav a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+h2 {
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #0a1f44, #5ab0f2);
+  text-align: center;
+  padding: 6rem 2rem;
+  color: white;
+}
+.hero img {
+  max-width: 180px; /* balanced hero logo */
+  margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: white;
+  color: #0a1f44;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.cta-button:hover {
+  background-color: #e6e6e6;
+}
+
+/* Image Styling */
+.section-image,
+.offering-image {
+  max-width: 120px;   /* small, consistent size */
+  height: auto;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+/* Offerings Grid */
+.offerings-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.offerings-grid div {
+  text-align: center;
+  max-width: 250px;
+  margin: 20px;
+}
+
+/* Footer */
+footer {
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  nav a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+  .offerings-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

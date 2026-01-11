@@ -1,0 +1,7 @@
+# Robots.txt for IDShift
+# Allow all crawlers full access to the site
+User-agent: *
+Allow: /
+
+# Sitemap for structured indexing
+Sitemap: https://idshift.netlify.app/sitemap.xml
