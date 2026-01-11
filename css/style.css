@@ -1,0 +1,54 @@
+/* Reset some defaults for consistency */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #222222;
+}
+
+/* Global image rule: shrink all images site-wide */
+img {
+  max-width: 120px;   /* adjust to 100px, 150px as needed */
+  height: auto;       /* keeps aspect ratio */
+  display: inline-block;
+}
+
+/* Specific classes for more control */
+img.logo {
+  max-width: 120px;   /* logo size */
+}
+
+img.icon {
+  max-width: 32px;    /* favicon or small icons */
+}
+
+img.content {
+  max-width: 300px;   /* larger content images, banners */
+}
+
+/* Branding colors (from your palette) */
+:root {
+  --brand-dark-blue: #0a1f44;
+  --brand-blue: #1e3a8a;
+  --brand-mid-blue: #2563eb;
+  --brand-light-blue: #60a5fa;
+  --brand-pale-blue: #bfdbfe;
+}
+
+/* Example usage for headings and buttons */
+h1, h2, h3 {
+  color: var(--brand-dark-blue);
+}
+
+button {
+  background-color: var(--brand-mid-blue);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--brand-blue);
+}
