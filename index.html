@@ -5,95 +5,168 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>IDShift – Identity Security Intelligence</title>
 
-  <!-- Favicon and Manifest -->
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="manifest" href="/site.webmanifest" />
-
   <!-- SEO -->
   <meta name="description" content="IDShift – AI-driven identity security advisory helping enterprises detect and explain identity risk across IAM, cloud access, and privileged access." />
-  <meta name="robots" content="index, follow" />
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Theme -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0a1f44',
+            brandMid: '#2563eb',
+            brandLight: '#f8fafc',
+          },
+          animation: {
+            fadeUp: 'fadeUp 0.8s ease-out forwards',
+            slowPulse: 'pulse 6s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+          },
+        }
+      }
+    }
+  </script>
 </head>
-<body>
 
-  <!-- Header -->
-  <header>
-    <div>
-      <img src="/images/logo.png" alt="IDShift shield logo" height="40"/>
-    </div>
-    <nav>
-      <a href="#problem">Problem</a>
-      <a href="#belief">Belief</a>
-      <a href="#offerings">Offerings</a>
-      <a href="#contact">Contact</a>
+<body class="bg-white text-slate-800 antialiased">
+
+<!-- Header -->
+<header class="sticky top-0 bg-white border-b border-slate-200 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <img src="/images/logo.png" alt="IDShift logo" class="h-10" />
+    <nav class="space-x-8 text-sm font-medium">
+      <a href="#problem" class="hover:text-brandMid">Problem</a>
+      <a href="#belief" class="hover:text-brandMid">Belief</a>
+      <a href="#offerings" class="hover:text-brandMid">Offerings</a>
+      <a href="#contact" class="px-4 py-2 bg-brandMid text-white rounded-lg hover:bg-blue-700 transition">
+        Contact
+      </a>
     </nav>
-  </header>
-
-  <!-- Hero -->
-  <div class="hero">
-    <img src="/images/hero.png" alt="IDShift shield logo" />
-    <h1>Identity Security, Reimagined</h1>
-    <p>AI-driven insights to detect, explain, and reduce identity risk across your enterprise.</p>
-    <a href="#offerings" class="cta-button">Discover Our Offerings</a>
   </div>
+</header>
 
-  <!-- Problem -->
-  <section id="problem">
-    <h2>The Problem</h2>
-    <img src="/images/the-problem.png" alt="Illustration showing identity drift and tangled access cards" class="section-image"/>
-    <p>Identity is now the primary attack surface. Most organizations still rely on static access controls and periodic reviews. Over time, privileges accumulate and roles multiply, while access is rarely removed. Policy intent quietly drifts from reality. This silent identity drift is behind most modern breaches.</p>
-  </section>
+<!-- Hero -->
+<section class="py-28 text-center animate-fadeUp">
+  <div class="max-w-3xl mx-auto px-6">
+    <img src="/images/hero.png" alt="" class="h-28 mx-auto mb-8 animate-slowPulse" />
+    <h1 class="text-5xl font-bold text-brandDark mb-6">
+      Identity Security, Reimagined
+    </h1>
+    <p class="text-lg text-slate-600 mb-10">
+      AI-driven insights to detect, explain, and reduce identity risk across your enterprise.
+    </p>
+    <a href="#offerings"
+       class="inline-block px-8 py-4 bg-brandMid text-white font-semibold rounded-xl hover:scale-105 transition">
+      Discover Our Offerings
+    </a>
+  </div>
+</section>
 
-  <!-- Belief -->
-  <section id="belief">
-    <h2>Our Belief</h2>
-    <img src="/images/our-belief.png" alt="AI brain with shield representing identity risk drift" class="section-image"/>
-    <p>Identity risk doesn’t appear overnight — it drifts. IDShift is an AI-driven identity security advisory that helps enterprises detect and explain identity risk across IAM, cloud access, and privileged access — all on top of your existing IAM stack without replacing it.</p>
-  </section>
+<!-- Problem -->
+<section id="problem" class="py-24 bg-brandLight">
+  <div class="max-w-5xl mx-auto px-6 animate-fadeUp">
+    <h2 class="text-3xl font-bold text-brandDark mb-6">The Problem</h2>
+    <p class="max-w-3xl text-slate-700">
+      Identity is now the primary attack surface. Privileges accumulate, roles multiply,
+      and policy intent drifts silently — driving the majority of modern breaches.
+    </p>
+  </div>
+</section>
 
-  <!-- Offerings -->
-  <section id="offerings">
-    <h2>Our Offerings</h2>
-    <div class="offerings-grid">
-      <div>
-        <img src="/images/idshift scan.png" alt="IDShift Scan – magnifying glass and shield with checkmark representing identity risk assessment" class="offering-image"/>
-        <p><strong>IDShift Scan™</strong>: AI-assisted identity risk assessment with executive-ready insights.</p>
+<!-- Belief -->
+<section id="belief" class="py-24">
+  <div class="max-w-5xl mx-auto px-6 animate-fadeUp">
+    <h2 class="text-3xl font-bold text-brandDark mb-6">Our Belief</h2>
+    <p class="max-w-3xl text-slate-700">
+      Identity risk doesn’t appear overnight — it drifts. IDShift detects and explains
+      identity risk across IAM, cloud, and privileged access without replacing your tools.
+    </p>
+  </div>
+</section>
+
+<!-- Offerings -->
+<section id="offerings" class="py-24 bg-brandLight">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-brandDark mb-14 animate-fadeUp">Our Offerings</h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+      <!-- Card -->
+      <div class="bg-white p-8 rounded-2xl shadow hover:-translate-y-2 transition animate-fadeUp">
+        <h3 class="font-semibold text-lg mb-3">IDShift Scan™</h3>
+        <p class="text-slate-600">
+          AI-assisted identity risk assessment with executive-ready insights.
+        </p>
       </div>
-      <div>
-        <img src="/images/idshift reduce.png" alt="IDShift Reduce – glowing lock with two keys representing privilege reduction" class="offering-image"/>
-        <p><strong>IDShift Reduce™</strong>: Privilege and role optimization to reduce access sprawl.</p>
+
+      <div class="bg-white p-8 rounded-2xl shadow hover:-translate-y-2 transition animate-fadeUp">
+        <h3 class="font-semibold text-lg mb-3">IDShift Reduce™</h3>
+        <p class="text-slate-600">
+          Privilege and role optimization to reduce access sprawl.
+        </p>
       </div>
-      <div>
-        <img src="/images/idshift-guard.png" alt="IDShift Guard – radar screen with shield representing continuous identity drift detection" class="offering-image"/>
-        <p><strong>IDShift Guard™</strong>: Continuous detection of identity drift and anomalous access behavior.</p>
+
+      <div class="bg-white p-8 rounded-2xl shadow hover:-translate-y-2 transition animate-fadeUp">
+        <h3 class="font-semibold text-lg mb-3">IDShift Guard™</h3>
+        <p class="text-slate-600">
+          Continuous detection of identity drift and anomalous access.
+        </p>
       </div>
     </div>
+  </div>
+</section>
 
-    <h3>Why IDShift</h3>
-    <img src="/images/why-idshift.png" alt="Shield with checkmark, scale, and padlock icons" class="section-image"/>
-    <ul>
-      <li>Identity-first, not tool-first</li>
-      <li>Explainable AI by design</li>
-      <li>Security-led and compliance-aware</li>
-      <li>Tool-agnostic across IAM, PAM, and cloud</li>
-      <li>Built by practitioners</li>
-    </ul>
-  </section>
+<!-- Contact + Email Capture -->
+<section id="contact" class="py-28 text-center">
+  <div class="max-w-xl mx-auto px-6 animate-fadeUp">
+    <h2 class="text-3xl font-bold text-brandDark mb-6">Let’s Talk</h2>
+    <p class="text-slate-600 mb-10">
+      If identity risk is on your radar, we’d love to connect.
+    </p>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <img src="/images/contact.png" alt="Envelope and handshake icon representing secure contact" class="section-image"/>
-    <p>If identity risk is on your radar, let’s talk.</p>
-    <p>Email: <a href="mailto:support@idshift.cloud">support@idshift.cloud</a></p>
-  </section>
+    <!-- Email Capture Form -->
+    <form
+      class="flex flex-col sm:flex-row gap-4 justify-center"
+      action="#"
+      method="POST"
+    >
+      <input
+        type="email"
+        name="email"
+        required
+        placeholder="you@company.com"
+        class="w-full sm:w-72 px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brandMid outline-none"
+      />
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2026 IDShift. All rights reserved.
-  </footer>
+      <button
+        type="submit"
+        class="px-6 py-3 bg-brandMid text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+      >
+        Get in Touch
+      </button>
+    </form>
+
+    <p class="mt-6 text-sm text-slate-500">
+      Or email us directly at
+      <a href="mailto:support@idshift.cloud" class="text-brandMid font-medium">
+        support@idshift.cloud
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-10 border-t border-slate-200 text-center text-sm text-slate-500">
+  © 2026 IDShift. All rights reserved.
+</footer>
 
 </body>
 </html>
